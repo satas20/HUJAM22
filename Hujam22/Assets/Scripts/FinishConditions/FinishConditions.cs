@@ -11,6 +11,8 @@ public class FinishConditions : MonoBehaviour
     [SerializeField] private float duration;
     private bool isDangerousObject;
     private float elapsed;
+    [SerializeField] ParticleSystem crash;
+
     private void Awake()
     {
         isDangerousObject = false;
@@ -55,6 +57,7 @@ public class FinishConditions : MonoBehaviour
         Debug.Log(collision.gameObject.tag);
         if (collision.gameObject.tag == "dangerousObject")
         {
+            crash.Play();
             isDangerousObject=true;
             this.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
         }

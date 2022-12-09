@@ -193,6 +193,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7637285692563846760, guid: 5b638760655aba644a9ff22116d30760, type: 3}
   m_PrefabInstance: {fileID: 7637285693107599970}
   m_PrefabAsset: {fileID: 0}
+--- !u!198 &1241650610 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7296960402055691251, guid: 4d4ab9413edde1b40b506c8ca357a7ed, type: 3}
+  m_PrefabInstance: {fileID: 1857092428}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1520814163
 GameObject:
   m_ObjectHideFlags: 0
@@ -485,6 +490,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7512351709485056772, guid: 4d4ab9413edde1b40b506c8ca357a7ed, type: 3}
+      propertyPath: crash
+      value: 
+      objectReference: {fileID: 1241650610}
     - target: {fileID: 7512351709485056772, guid: 4d4ab9413edde1b40b506c8ca357a7ed, type: 3}
       propertyPath: duration
       value: 1

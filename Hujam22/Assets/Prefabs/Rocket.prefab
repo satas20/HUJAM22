@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 8432106675061552496}
   - component: {fileID: 8432106675061552500}
   - component: {fileID: 8432106675061552501}
-  - component: {fileID: 8432106675061552502}
   - component: {fileID: 7512351709485056772}
   m_Layer: 0
   m_Name: Rocket
@@ -267,6 +266,21 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
+--- !u!114 &7512351709485056772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8432106675061552495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24a5be23744b3e43aca3946ac57d49c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  magnitude: 0.1
+  duration: 1
+  crash: {fileID: 7296960402055691251}
 --- !u!1001 &7501771186870841203
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -331,6 +345,11 @@ PrefabInstance:
 --- !u!4 &1595671291110889696 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9097081788752623507, guid: 79d138cf11c2bfe40ab8230e33cb548c, type: 3}
+  m_PrefabInstance: {fileID: 7501771186870841203}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &7296960402055691251 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 963673523961500800, guid: 79d138cf11c2bfe40ab8230e33cb548c, type: 3}
   m_PrefabInstance: {fileID: 7501771186870841203}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9128443775156926450
@@ -400,23 +419,3 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9128443774624094813, guid: c566ae7a773ee434cb570814f7927a1b, type: 3}
   m_PrefabInstance: {fileID: 9128443775156926450}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8432106675061552495}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80cea67d0a3328f4c923464d02205a63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lr: {fileID: 0}
-  dragAndThrow: {fileID: 0}
---- !u!114 &7512351709485056772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8432106675061552495}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e24a5be23744b3e43aca3946ac57d49c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
