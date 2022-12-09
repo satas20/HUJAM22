@@ -12,7 +12,8 @@ public class DragAndThrow : MonoBehaviour
     private TrajectoryLine tl;
     private Rigidbody2D rb;
     private Camera cam;
-    
+
+    public int fuel=2;
     Vector2 force;
     Vector3 startPoint;
     Vector3 endPoint;
@@ -53,14 +54,20 @@ public class DragAndThrow : MonoBehaviour
         }
         if (Input.GetMouseButtonUp(0))
         {
-            rb.velocity = new Vector2(0,0);
-            endPoint = cam.ScreenToWorldPoint(Input.mousePosition);
-            endPoint.z = 15;
+           
+            if (fuel > 0)
+            {
+                rb.velocity = new Vector2(0, 0);
+                endPoint = cam.ScreenToWorldPoint(Input.mousePosition);
+                endPoint.z = 15;
 
-            force = new Vector2(Mathf.Clamp(startPoint.x - endPoint.x, minPower.x, maxPower.x), Mathf.Clamp(startPoint.y - endPoint.y, minPower.y, maxPower.y));
-            rb.AddForce(force * power, ForceMode2D.Impulse);
+                force = new Vector2(Mathf.Clamp(startPoint.x - endPoint.x, minPower.x, maxPower.x), Mathf.Clamp(startPoint.y - endPoint.y, minPower.y, maxPower.y));
+                rb.AddForce(force * power, ForceMode2D.Impulse);
 
+                fuel--;
+            }
             tl.EndLine();
+            
         }
     }
 }
