@@ -5,7 +5,7 @@ using UnityEngine;
 public class Gravity : MonoBehaviour
 {
     private Vector2 distance;
-    [SerializeField] private int gravityForce;
+    [SerializeField] private float gravityForce;
     // Start is called before the first frame update
     void Start()
     {

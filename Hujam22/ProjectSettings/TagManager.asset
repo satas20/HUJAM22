@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - rocket
+  - dangerousObject
   layers:
   - Default
   - TransparentFX
