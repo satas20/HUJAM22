@@ -18,7 +18,6 @@ public class OrbitalMovement : MonoBehaviour
     private void Awake()
     {
         timeCounter = 0;
-        speed = 1;
     }
     // Start is called before the first frame update
     void Start()

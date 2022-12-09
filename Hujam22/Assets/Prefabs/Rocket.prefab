@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8432106675061552500}
   - component: {fileID: 8432106675061552501}
   - component: {fileID: 8432106675061552502}
+  - component: {fileID: 7512351709485056772}
   m_Layer: 0
   m_Name: Rocket
   m_TagString: Untagged
@@ -120,6 +121,7 @@ MonoBehaviour:
   power: 2
   minPower: {x: -2, y: -2}
   maxPower: {x: 2, y: 2}
+  fuel: 2
 --- !u!50 &8432106675061552500
 Rigidbody2D:
   serializedVersion: 4
@@ -260,3 +262,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lr: {fileID: 0}
+  dragAndThrow: {fileID: 0}
+--- !u!114 &7512351709485056772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8432106675061552495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24a5be23744b3e43aca3946ac57d49c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
