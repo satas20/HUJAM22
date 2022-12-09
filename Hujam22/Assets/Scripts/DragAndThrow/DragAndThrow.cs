@@ -9,6 +9,8 @@ public class DragAndThrow : MonoBehaviour
     [SerializeField] Vector2 minPower;
     [SerializeField] Vector2 maxPower ;
 
+    [SerializeField] ParticleSystem fire;
+
     private TrajectoryLine tl;
     private Rigidbody2D rb;
     private Camera cam;
@@ -38,8 +40,8 @@ public class DragAndThrow : MonoBehaviour
         }
 
         if (Input.GetMouseButton(0)) {
-            
 
+            fire.Stop();
             Vector3 currentPoint = cam.ScreenToWorldPoint(Input.mousePosition);
             currentPoint.z = 15;
             Vector3 linePoint=  transform.position + (startPoint -currentPoint);
@@ -64,6 +66,7 @@ public class DragAndThrow : MonoBehaviour
                 force = new Vector2(Mathf.Clamp(startPoint.x - endPoint.x, minPower.x, maxPower.x), Mathf.Clamp(startPoint.y - endPoint.y, minPower.y, maxPower.y));
                 rb.AddForce(force * power, ForceMode2D.Impulse);
 
+                fire.Play();
                 fuel--;
             }
             tl.EndLine();
