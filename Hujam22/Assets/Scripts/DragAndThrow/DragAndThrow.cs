@@ -9,6 +9,7 @@ public class DragAndThrow : MonoBehaviour
     [SerializeField] Vector2 minPower;
     [SerializeField] Vector2 maxPower ;
 
+    [SerializeField] AudioSource rocketSound;
     [SerializeField] ParticleSystem fire;
 
     private TrajectoryLine tl;
@@ -74,6 +75,7 @@ public class DragAndThrow : MonoBehaviour
                     fire.Play();
                     rb.AddForce(force * power, ForceMode2D.Impulse);
                     fuel--;
+                    rocketSound.Play();
                 }
                 
                 

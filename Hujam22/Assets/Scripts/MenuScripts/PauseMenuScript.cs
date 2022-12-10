@@ -9,6 +9,8 @@ public class PauseMenuScript : MonoBehaviour
     [SerializeField] GameObject rocket;
     DragAndThrow dAT;
     TrajectoryLine tL;
+    [SerializeField] AudioSource buttonSound;
+
 
     private void Awake()
     {
@@ -35,9 +37,11 @@ public class PauseMenuScript : MonoBehaviour
         Time.timeScale = 1;
         dAT.enabled = true;
         tL.enabled = true;
+        buttonSound.Play();
     }
     public void LoadMenu(){
         SceneManager.LoadScene("MainMenu");
+        buttonSound.Play();
     }
     public void Countiniue()
     {
@@ -45,6 +49,7 @@ public class PauseMenuScript : MonoBehaviour
         pauseMenu.SetActive(false);
         dAT.enabled = true;
         tL.enabled = true;
+        buttonSound.Play();
     }
     public void Quit() {
         Application.Quit();

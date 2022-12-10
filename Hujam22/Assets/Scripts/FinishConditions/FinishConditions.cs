@@ -12,6 +12,11 @@ public class FinishConditions : MonoBehaviour
     private bool isDangerousObject;
     private float elapsed;
     [SerializeField] ParticleSystem crash;
+    [SerializeField] AudioSource crashSound;
+    [SerializeField] AudioSource fuelSound;
+
+
+
 
     private void Awake()
     {
@@ -61,7 +66,8 @@ public class FinishConditions : MonoBehaviour
             gameObject.GetComponent<DragAndThrow>().enabled = false;
             gameObject.GetComponent<TrajectoryLine>().enabled = false;
             crash.Play();
-            isDangerousObject=true;
+            crashSound.Play();
+            isDangerousObject =true;
             this.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
         }
         else if (collision.gameObject.tag == "finish")
@@ -77,6 +83,7 @@ public class FinishConditions : MonoBehaviour
         {
             collision.gameObject.SetActive(false);
             this.gameObject.GetComponent<DragAndThrow>().fuel += 1;
+            fuelSound.Play();
         }
     }
 
