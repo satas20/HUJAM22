@@ -64,10 +64,6 @@ public class FinishConditions : MonoBehaviour
             isDangerousObject=true;
             this.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
         }
-        else if(collision.gameObject.tag == "fuel")
-        {
-            this.gameObject.GetComponent<DragAndThrow>().fuel += 1;
-        }
         else if (collision.gameObject.tag == "finish")
         {
             //Debug.Log(int.Parse(sceneName)+1);
@@ -75,5 +71,13 @@ public class FinishConditions : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "fuel")
+        {
+            collision.gameObject.SetActive(false);
+            this.gameObject.GetComponent<DragAndThrow>().fuel += 1;
+        }
+    }
 
 }
