@@ -11,6 +11,7 @@ public class DragAndThrow : MonoBehaviour
 
     [SerializeField] AudioSource rocketSound;
     [SerializeField] ParticleSystem fire;
+    [SerializeField] Transform lineStart;
 
     private TrajectoryLine tl;
     private Rigidbody2D rb;
@@ -48,13 +49,13 @@ public class DragAndThrow : MonoBehaviour
             fire.Stop();
             Vector3 currentPoint = cam.ScreenToWorldPoint(Input.mousePosition);
             currentPoint.z = 15;
-            Vector3 linePoint=  transform.position + (startPoint -currentPoint);
+            Vector3 linePoint= lineStart.position + (startPoint -currentPoint);
             // tl.RenderLine(startPoint, currentPoint);
-            Vector2 direction = linePoint - transform.position;
+            Vector2 direction = linePoint - lineStart.position;
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
             
-            tl.RenderLine(linePoint,transform.position);
+            tl.RenderLine(linePoint,lineStart.position);
             transform.rotation = rotation;
 
         }
