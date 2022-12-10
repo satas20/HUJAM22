@@ -57,6 +57,7 @@ public class FinishConditions : MonoBehaviour
         Debug.Log(collision.gameObject.tag);
         if (collision.gameObject.tag == "dangerousObject")
         {
+            gameObject.transform.parent = collision.gameObject.transform;
             gameObject.GetComponent<DragAndThrow>().enabled = false;
             gameObject.GetComponent<TrajectoryLine>().enabled = false;
             crash.Play();
@@ -69,7 +70,7 @@ public class FinishConditions : MonoBehaviour
         }
         else if (collision.gameObject.tag == "finish")
         {
-            Debug.Log(int.Parse(sceneName)+1);
+            //Debug.Log(int.Parse(sceneName)+1);
             SceneManager.LoadScene(int.Parse(sceneName)+1);
         }
     }

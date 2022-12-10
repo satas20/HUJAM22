@@ -20,7 +20,10 @@ public class DragAndThrow : MonoBehaviour
     Vector3 startPoint;
     Vector3 endPoint;
 
-
+    private void Awake()
+    {
+        Time.timeScale = 1;
+    }
     private void Start()
     {
         tl = GetComponent<TrajectoryLine>();
@@ -49,25 +52,31 @@ public class DragAndThrow : MonoBehaviour
             Vector2 direction = linePoint - transform.position;
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-            transform.rotation = rotation;
-            tl.RenderLine(linePoint,transform.position);
-
             
+            tl.RenderLine(linePoint,transform.position);
+            transform.rotation = rotation;
+
         }
         if (Input.GetMouseButtonUp(0))
         {
            
             if (fuel > 0)
             {
-                rb.velocity = new Vector2(0, 0);
+               
                 endPoint = cam.ScreenToWorldPoint(Input.mousePosition);
                 endPoint.z = 15;
 
                 force = new Vector2(Mathf.Clamp(startPoint.x - endPoint.x, minPower.x, maxPower.x), Mathf.Clamp(startPoint.y - endPoint.y, minPower.y, maxPower.y));
-                rb.AddForce(force * power, ForceMode2D.Impulse);
 
-                fire.Play();
-                fuel--;
+                
+                if (force.magnitude > 0.1) {
+                    rb.velocity = new Vector2(0, 0);
+                    fire.Play();
+                    rb.AddForce(force * power, ForceMode2D.Impulse);
+                    fuel--;
+                }
+                
+                
             }
             tl.EndLine();
             
