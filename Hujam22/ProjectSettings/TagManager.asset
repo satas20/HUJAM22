@@ -6,6 +6,7 @@ TagManager:
   tags:
   - rocket
   - dangerousObject
+  - finish
   layers:
   - Default
   - TransparentFX

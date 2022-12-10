@@ -44,7 +44,7 @@ public class FinishConditions : MonoBehaviour
 
             camera.transform.position += new Vector3(x, y);
             elapsed += Time.deltaTime;
-            Debug.Log(elapsed);
+           // Debug.Log(elapsed);
         }
         else
         {
@@ -57,6 +57,8 @@ public class FinishConditions : MonoBehaviour
         Debug.Log(collision.gameObject.tag);
         if (collision.gameObject.tag == "dangerousObject")
         {
+            gameObject.GetComponent<DragAndThrow>().enabled = false;
+            gameObject.GetComponent<TrajectoryLine>().enabled = false;
             crash.Play();
             isDangerousObject=true;
             this.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
@@ -64,6 +66,11 @@ public class FinishConditions : MonoBehaviour
         else if(collision.gameObject.tag == "fuel")
         {
             this.gameObject.GetComponent<DragAndThrow>().fuel += 1;
+        }
+        else if (collision.gameObject.tag == "finish")
+        {
+            Debug.Log(int.Parse(sceneName)+1);
+            SceneManager.LoadScene(int.Parse(sceneName)+1);
         }
     }
 
