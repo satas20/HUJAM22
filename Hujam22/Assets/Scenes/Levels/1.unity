@@ -637,6 +637,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Planet
       objectReference: {fileID: 0}
+    - target: {fileID: 7916842775415770111, guid: 5b90c059d7aa29c4583fd7ca441a7652, type: 3}
+      propertyPath: gravityForce
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7916842776463270606, guid: 5b90c059d7aa29c4583fd7ca441a7652, type: 3}
       propertyPath: m_IsActive
       value: 0
