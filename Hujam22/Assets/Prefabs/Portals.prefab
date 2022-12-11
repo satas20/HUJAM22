@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 6610240161824872868}
   - component: {fileID: 6610240161824872869}
   - component: {fileID: 6610240161824872870}
+  - component: {fileID: 3803945151404380089}
   m_Layer: 0
   m_Name: PortalB
   m_TagString: Untagged
@@ -61,7 +62,7 @@ Transform:
   m_GameObject: {fileID: 6610240161824872864}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2, y: 0, z: 9.396631}
-  m_LocalScale: {x: 0.65, y: 0.65, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6610240161812044889}
@@ -108,7 +109,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_Sprite: {fileID: -619455324, guid: c82885bd10395e04ebee3a3a019cdebc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -132,8 +133,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.1, y: 2.1}
+  m_Offset: {x: 0.004544586, y: -0.03181219}
+  m_Size: {x: 0.45466667, y: 0.5457461}
   m_Direction: 0
 --- !u!114 &6610240161824872870
 MonoBehaviour:
@@ -147,6 +148,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e7b5aaf2bb6e21429ce48db41b7db36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &3803945151404380089
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6610240161824872864}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c4ee224b4ed44044f8ed81640fb28602, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6610240163574278804
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,6 +180,7 @@ GameObject:
   - component: {fileID: 6610240163574278808}
   - component: {fileID: 6610240163574278809}
   - component: {fileID: 6610240163574278810}
+  - component: {fileID: 6519303426200861702}
   m_Layer: 0
   m_Name: PortalA
   m_TagString: Untagged
@@ -175,7 +197,7 @@ Transform:
   m_GameObject: {fileID: 6610240163574278804}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2, y: 0, z: 9.396631}
-  m_LocalScale: {x: 0.65, y: 0.65, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6610240161812044889}
@@ -222,7 +244,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_Sprite: {fileID: -1698046758, guid: c82885bd10395e04ebee3a3a019cdebc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -246,8 +268,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.1, y: 2.1}
+  m_Offset: {x: -0.0007239729, y: -0.030760914}
+  m_Size: {x: 0.44015536, y: 0.5649092}
   m_Direction: 0
 --- !u!114 &6610240163574278810
 MonoBehaviour:
@@ -261,3 +283,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e7b5aaf2bb6e21429ce48db41b7db36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &6519303426200861702
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6610240163574278804}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c4ee224b4ed44044f8ed81640fb28602, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
