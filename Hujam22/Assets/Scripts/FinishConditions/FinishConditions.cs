@@ -14,7 +14,7 @@ public class FinishConditions : MonoBehaviour
     [SerializeField] ParticleSystem crash;
     [SerializeField] AudioSource crashSound;
     [SerializeField] AudioSource fuelSound;
-
+    private Animator animator;
 
 
 
@@ -29,6 +29,7 @@ public class FinishConditions : MonoBehaviour
     {
         camera = Camera.main;
         sceneName = SceneManager.GetActiveScene().name;
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -59,9 +60,10 @@ public class FinishConditions : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log(collision.gameObject.tag);
+        //Debug.Log(collision.gameObject.tag);
         if (collision.gameObject.tag == "dangerousObject")
         {
+            animator.SetBool("explotion", true);
             gameObject.transform.parent = collision.gameObject.transform;
             gameObject.GetComponent<DragAndThrow>().enabled = false;
             gameObject.GetComponent<TrajectoryLine>().enabled = false;
