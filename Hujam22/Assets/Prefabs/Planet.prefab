@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1400815186484160661}
   - component: {fileID: 7166976496855481116}
-  - component: {fileID: 5101812757606733600}
-  - component: {fileID: 8442380095089422933}
   - component: {fileID: 3350385146635254514}
   - component: {fileID: 5883208662778453323}
+  - component: {fileID: 2913787390379811365}
+  - component: {fileID: 522889254926938708}
   m_Layer: 0
   m_Name: Uydu
   m_TagString: dangerousObject
@@ -88,23 +88,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5101812757606733600
-MonoBehaviour:
+--- !u!60 &3350385146635254514
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 462996634358913381}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd4f67033c5d0cf42a7c3558807b9526, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  width: 5
-  height: 5
-  segments: 60
---- !u!120 &8442380095089422933
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 1, y: 0.8828125}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.08764744, y: 0.29341173}
+      - {x: -0.08350325, y: 0.29653835}
+      - {x: -0.15520835, y: 0.20563221}
+      - {x: -0.2258339, y: 0.10050297}
+      - {x: -0.3114915, y: 0.042219162}
+      - {x: -0.09347081, y: -0.26852226}
+      - {x: 0.10776806, y: -0.28770256}
+      - {x: 0.15009117, y: -0.12521124}
+      - {x: 0.18710256, y: -0.07420111}
+      - {x: 0.2199688, y: 0.09024191}
+      - {x: 0.1264391, y: 0.15551758}
+--- !u!95 &5883208662778453323
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462996634358913381}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dcace9eeaa408fa4b8a3b19aa28933ee, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!120 &2913787390379811365
 LineRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -168,8 +208,8 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.9019608, g: 0.9019608, b: 0.9019608, a: 1}
-      key1: {r: 0.9019608, g: 0.9019608, b: 0.9019608, a: 1}
+      key0: {r: 0.9019608, g: 0.9019608, b: 0.9019608, a: 0.15686275}
+      key1: {r: 0.9019608, g: 0.9019608, b: 0.9019608, a: 0.15686275}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -203,62 +243,22 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 0
   m_Loop: 0
---- !u!60 &3350385146635254514
-PolygonCollider2D:
+--- !u!114 &522889254926938708
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 462996634358913381}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
-    newSize: {x: 1, y: 0.8828125}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.08764744, y: 0.29341173}
-      - {x: -0.08350325, y: 0.29653835}
-      - {x: -0.15520835, y: 0.20563221}
-      - {x: -0.2258339, y: 0.10050297}
-      - {x: -0.3114915, y: 0.042219162}
-      - {x: -0.09347081, y: -0.26852226}
-      - {x: 0.10776806, y: -0.28770256}
-      - {x: 0.15009117, y: -0.12521124}
-      - {x: 0.18710256, y: -0.07420111}
-      - {x: 0.2199688, y: 0.09024191}
-      - {x: 0.1264391, y: 0.15551758}
---- !u!95 &5883208662778453323
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 462996634358913381}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: dcace9eeaa408fa4b8a3b19aa28933ee, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd4f67033c5d0cf42a7c3558807b9526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  width: 5
+  height: 5
+  segments: 60
 --- !u!1 &7916842775415770110
 GameObject:
   m_ObjectHideFlags: 0
