@@ -170,9 +170,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7897b2f9a94565b46a9a2973def47134, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power: 2
-  minPower: {x: -2, y: -2}
-  maxPower: {x: 2, y: 2}
+  power: 1
+  minPower: {x: -0.1, y: -0.1}
+  maxPower: {x: 0.1, y: 0.1}
   rocketSound: {fileID: 2858926278624743076}
   fire: {fileID: 549645741}
   lineStart: {fileID: 1741859006}
@@ -331,7 +331,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 78c935db2febd25408e3b81956616a81, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 654b9bf7e0e630a40bcd04964eb4a0e1, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.128
   m_Pitch: 1
