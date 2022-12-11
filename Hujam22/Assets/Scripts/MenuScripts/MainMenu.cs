@@ -6,6 +6,8 @@ public class MainMenu : MonoBehaviour
 {
     [SerializeField] GameObject levelMenu;
     [SerializeField] GameObject mainMenu;
+    [SerializeField] GameObject credits;
+
     [SerializeField] AudioSource buttonSound;
 
     public void showLevelMenu(){
@@ -15,8 +17,16 @@ public class MainMenu : MonoBehaviour
     }
     public void showMainMenu()
     {
+        credits.SetActive(false);
         levelMenu.SetActive(false);
         mainMenu.SetActive(true);
+        buttonSound.Play();
+    }
+    public void showCredits()
+    {
+        credits.SetActive(true);
+        mainMenu.SetActive(false);
+        
         buttonSound.Play();
     }
     public void Quit()
