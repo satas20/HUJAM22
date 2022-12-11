@@ -170,9 +170,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7897b2f9a94565b46a9a2973def47134, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power: 3
-  minPower: {x: -20, y: -20}
-  maxPower: {x: 20, y: 20}
+  power: 2.5
+  minPower: {x: -5, y: -5}
+  maxPower: {x: 5, y: 5}
   rocketSound: {fileID: -455217859899748522}
   fire: {fileID: 549645741}
   lineStart: {fileID: 1741859006}
