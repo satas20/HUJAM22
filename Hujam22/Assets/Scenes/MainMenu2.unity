@@ -3341,6 +3341,10 @@ PrefabInstance:
       propertyPath: fuel
       value: 2000
       objectReference: {fileID: 0}
+    - target: {fileID: 8432106675061552496, guid: 4d4ab9413edde1b40b506c8ca357a7ed, type: 3}
+      propertyPath: minPower.x
+      value: -5
+      objectReference: {fileID: 0}
     - target: {fileID: 8432106675061552498, guid: 4d4ab9413edde1b40b506c8ca357a7ed, type: 3}
       propertyPath: m_Sprite
       value: 
