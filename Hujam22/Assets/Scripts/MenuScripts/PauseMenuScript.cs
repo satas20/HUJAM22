@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class PauseMenuScript : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class PauseMenuScript : MonoBehaviour
     DragAndThrow dAT;
     TrajectoryLine tL;
     [SerializeField] AudioSource buttonSound;
-
+    [SerializeField] TextMeshProUGUI fuelText;
 
     private void Awake()
     {
@@ -20,6 +21,8 @@ public class PauseMenuScript : MonoBehaviour
     }
     private void Update()
     {
+        fuelText.text = "x" + dAT.fuel.ToString();
+
         if (Input.GetKeyDown(KeyCode.Escape)) 
         {
             
