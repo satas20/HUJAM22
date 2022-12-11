@@ -249,6 +249,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca387e3d885841b4a9ad50de0d90fcb7, type: 3}
+--- !u!1 &650719823 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7916842775796839889, guid: 5b90c059d7aa29c4583fd7ca441a7652, type: 3}
+  m_PrefabInstance: {fileID: 7916842775904705950}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &650719825
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650719823}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4b49fd28a0791fa4f815cbf2a71543bd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1174751732 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7916842776463270606, guid: 5b90c059d7aa29c4583fd7ca441a7652, type: 3}
@@ -576,6 +601,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 549645742, guid: 4d4ab9413edde1b40b506c8ca357a7ed, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8432106675061552495, guid: 4d4ab9413edde1b40b506c8ca357a7ed, type: 3}
       propertyPath: m_Name
       value: Rocket
@@ -771,6 +800,10 @@ PrefabInstance:
       propertyPath: gravityForce
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7916842775796839884, guid: 5b90c059d7aa29c4583fd7ca441a7652, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1822544522, guid: 2ea8c5a0845186f46a89cf535d0019c9, type: 3}
     - target: {fileID: 7916842776463270606, guid: 5b90c059d7aa29c4583fd7ca441a7652, type: 3}
       propertyPath: m_IsActive
       value: 0

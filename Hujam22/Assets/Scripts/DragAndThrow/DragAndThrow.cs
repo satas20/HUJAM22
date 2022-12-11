@@ -73,7 +73,6 @@ public class DragAndThrow : MonoBehaviour
                 endPoint.z = 15;
 
                 force = new Vector2(Mathf.Clamp(startPoint.x - endPoint.x, minPower.x, maxPower.x), Mathf.Clamp(startPoint.y - endPoint.y, minPower.y, maxPower.y));
-                Debug.Log("force: " + force);
 
                 //Animation
                 animator.SetBool("launch",true);
@@ -81,10 +80,6 @@ public class DragAndThrow : MonoBehaviour
                 if (force.magnitude > 0.1) {
                     rb.velocity = new Vector2(0, 0);
                     fire.Play();
-                    Debug.Log("force.magnitude: " + force.magnitude);
-                    Debug.Log("power: " + power);
-                    Debug.Log("Direction: " + direction.normalized);
-                    Debug.Log("TOTAL FORCE: " + force.magnitude * direction.normalized * power);
                     rb.AddForce(force.magnitude * direction.normalized * power, ForceMode2D.Impulse);
                     fuel--;
                     rocketSound.Play();
