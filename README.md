@@ -15,11 +15,11 @@ Goal of this game is to complete the levels by reaching the black holes.There is
 ## Controls
 -  Only mouse clicking necessary! Drag and Launch the SpaceShip .
 -  You can pause by ESC .
--  Yoy cab restart level by R.
+-  Yoy can restart level by R.
 
 ## Team:
--  Ata Ayyıldız - Programming  
--  Onur Altunışık - Programming 
+-  Ata Ayyıldız - Developer  
+-  Onur Altunışık - Developer 
 -  Tolga Varlık - 2D Art
 -  Ceren Yöndem - 2D Art
 
