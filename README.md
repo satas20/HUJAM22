@@ -1,6 +1,7 @@
 # HUJAM22
 # Space Frontier 
-Space frontier is a casual arcade game that orginaly maded for HUJAM22. The result of HUJAM'22 is , our game become Overeall #7 and  Compatibility With The Theme #1 among 75 other games by voting. 
+Space frontier is a casual arcade game that orginaly maded for HUJAM22. The result of HUJAM'22 is , our game become **Overeall #7** and  **Compatibility With The Theme #1** among **75 other games** by voting.
+
 In this Arcade  game you traveling in Space! Launch your SpaceShip and  travel among other Planets , Portals and Astreoids.
 
 ## How to play 
